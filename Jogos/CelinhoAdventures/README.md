@@ -30,7 +30,7 @@ Que serviu de inspiração, e foi o motivo deste projeto ter sido criado.
 
 ## 📝 Créditos
 >**Cutscene Engine by Pikku-a**, *GameMaker Marketplace*<br>
-Usado no código do jogo.
+Engina usada para as cutscenes do jogo.
 
 >**Littlewood by Sean Young**, *Steam*<br>
 A arte do CelinhoAdventures foi fortemente inspirada pela arte de Littlewood.
