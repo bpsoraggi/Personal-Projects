@@ -1,7 +1,7 @@
 # 🖥️ Projetos Pessoais
 ### Repositório para códigos, trabalhos e projetos pessoais
 -----------
-<img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/bpsoraggi/Projetos-Pessoais" /> <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/bpsoraggi/Projetos-Pessoais" /> <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/bpsoraggi/PUC-Minas" /> <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/bpsoraggi/PUC-Minas" /> <img alt="" src="https://img.shields.io/github/repo-size/bpsoraggi/Projetos-Pessoais" />
+<img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/bpsoraggi/Projetos-Pessoais" /> <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/bpsoraggi/Projetos-Pessoais" /> <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/bpsoraggi/Projetos-Pessoais" /> <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/bpsoraggi/Projetos-Pessoais" /> <img alt="" src="https://img.shields.io/github/repo-size/bpsoraggi/Projetos-Pessoais" />
 
 - 🎮 Jogos
 - ⌨️ Programas/Algoritmos
