@@ -1,0 +1,12 @@
+/// @description Variables
+
+duration = 60;
+targetRoom = room;
+color = c_black;
+
+timer = 0;
+alpha = 0;
+state = 0;
+
+xx = 0;
+yy = 0;
