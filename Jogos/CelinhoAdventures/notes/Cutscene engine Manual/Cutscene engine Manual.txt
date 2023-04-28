@@ -1,0 +1,136 @@
+CUTSCENE ENGINE MANUAL
+
+Welcome to use Cutscene engine!
+---------------------------------------------------
+CONTENTS
+- Get started
+- Simple step-by-step guide
+- "Internal" scripts
+- Dialogue
+	- Changing default settings of dialogue
+	- Smart line break configuration
+	- Using Draw GUI for dialogue
+	- Using Cutscene engine with Dialogue engine
+- Custom scripts
+- About unfinished scripts
+- Updating the asset
+- Tutorials
+- Contact
+- Other
+	- Showcasing your games
+	- Becoming a tester
+---------------------------------------------------
+	
+GET STARTED
+To get started take a look to the example rooms.
+
+Go to the creation code of the control_cutscene objects (double-click the object -> creation code).
+There you can see examples of how to use it.
+You may want to try modifying that code, changing some scripts or arguments and then running the game.
+
+Then you may want to know how to use the scripts. There are more than 30! So how to use them?
+In each script there is an explanation about what it does. There you can also see what arguments it needs.
+---------------------------------------------------
+
+SIMPLE STEP-BY-STEP GUIDE
+1. Add a control_cutscene object to the room
+2. Make sure there is a layer called "hud" in the room
+3. Double-click the control_cutscene object in the room
+4. Open the creation code
+5. Set these variables:
+	- cutscene_id (different for all cutscenes in the same room)
+	- cutscene_player (if cutscene_mode is collision, the collision is checked for this object) 
+	- cutscene_mode ("collision" or "immediate")
+	- persist (true or false)
+6. Set the 2d array "scene_info" with all the scripts that constitute the cutscene
+7. Here is an example (more are in the example room):
+	cutscene_id = 0;
+	cutscene_player = example_player;
+	cutscene_mode = "collision";
+	persist = false;
+
+	scene_info = [
+		[cutscene_play_sound,sound_alarm,1],
+		[cutscene_wait,1],
+		[cutscene_move_object,example_player,170,300,2],
+		[cutscene_dialogue_style,noone,c_black,c_white,c_white,1,example_font,noone,true,example_continue1],
+		[cutscene_dialogue,"What was that?"]
+	];
+In this example, the cutscene starts when example_player collides with control_cutscene. The cutscene plays a sound, waits for a second, moves an object and shows dialogue.
+---------------------------------------------------
+
+"INTERNAL" SCRIPTS
+Ignore them. They take care of themselves.
+---------------------------------------------------
+
+DIALOGUE
+Cutscene engine has lots of scripts to show text and dialogue. The script names start with "cutscene_dialogue_".
+
+	CHANGING DEFAULT SETTINGS OF DIALOGUE
+	If you don't want to call the script cutscene_dialogue_style, cutscene_dialogue_keys, cutscene_dialogue_sprite etc.
+	everytime you add dialogue, you can change the default settings in the control_cutscene object.
+	If you go to the create event of that object, you will find a "SETTINGS AREA" where you can change variables.
+
+	SMART LINE BREAK CONFIGURATION
+	Recently I added a new optional argument to cutscene_dialogue_style: smart line breaks.
+	This prevents text from changing line in the middle of a word. However, this is still an experimental
+	feature and doesn't work correctly on all projects. If you want to use this feature in your project but
+	it doesn't work correctly, you can try this:
+	Go to textbox_draw script. Change the variable called linebreak_addition to something else
+	(for example: 0, -5 or -10). It's completely possible that this doesn't fix it and you will not be able
+	to use this feature. However, I tried to use this feature in 4 different projects and in 3 of them changing
+	this variable helped (on 1 project it didn't work at all).
+	
+	USING DRAW GUI
+	Using Draw GUI to draw the dialogue hasn't been tested a lot yet, so I recommend using the normal Draw event.
+	But if you want to use it, follow these instructions:
+	1. Go to the textbox object.
+	2. Change the Draw event to Draw GUI.
+	3. Change the draw_gui variable there to true.
+	
+	Things to note:
+	Remember that using cutscene_dialogue_position is of course different when using Draw GUI.
+	When using Draw GUI, your camera size and viewport size should be the same, otherwise clicking options with mouse will not work well.
+
+	USING CUTSCENE ENGINE WITH DIALOGUE ENGINE
+	I also have a Dialogue engine (https://marketplace.yoyogames.com/assets/6657/dialogue-engine-text-boxes).
+	If you are using both engines together, you will notice that some objects and scripts have the same name.
+	You can delete the duplicates.
+---------------------------------------------------
+
+CUSTOM SCRIPTS
+You can make your own scripts too. When the thing the script is supposed to do is done, call cutscene_next().
+See the other scripts for examples.
+---------------------------------------------------
+
+ABOUT UNFINISHED SCRIPTS
+Some scripts might not work correctly yet, for example cutscene_skip.
+These will be fixed / updated in the future.
+---------------------------------------------------
+
+UPDATING THE ASSET
+NOTE! If you update the asset from your asset library, if the control_cutscene object gets updated,
+Gamemaker will probably remove it from all rooms, and your cutscenes might get removed too.
+So if you for some reason want to update it, I recommend doing a backup first.
+---------------------------------------------------
+
+TUTORIALS
+There are some simple tutorials (only one currently...) for this engine on my Youtube channel: https://www.youtube.com/channel/UCzKIFNtRA1A2r3cJB8alHYw
+---------------------------------------------------
+
+CONTACT
+If you need more help or want to suggest a feature, you can email me: pikkua.games@gmail.com
+I can also use discord.
+---------------------------------------------------
+
+OTHER
+This engine will improve over time and more features will be added.
+
+	SHOWCASING YOUR GAMES
+	Have you made a game using this Cutscene engine?
+	If so, you can email me a link to the game and I might showcase it on my website or in the marketplace.
+
+	BECOMING A TESTER
+	Would you like to try new features earlier? Email me to become a tester for Cutscene engine
+	(and Dialogue engine too if you own it). You will also get one of my games for free every time you have
+	tested an update, when the update is published.
