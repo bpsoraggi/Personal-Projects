@@ -1,0 +1,18 @@
+{
+  "resourceType": "GMOperaGXOptions",
+  "resourceVersion": "1.0",
+  "name": "operagx",
+  "option_operagx_version": "1.0.0.2",
+  "option_operagx_next_version": "1.0.0.3",
+  "option_operagx_game_name": "Lolost",
+  "option_operagx_interpolate_pixels": true,
+  "option_operagx_scale": 0,
+  "option_operagx_texture_page": "2048x2048",
+  "option_operagx_display_cursor": true,
+  "option_operagx_guid": "19f60550-d8c2-4c5e-a80c-96e6538496c6",
+  "option_operagx_team_name": "bsoraggi studio",
+  "option_operagx_team_id": "bfb5c936-6f9e-4c63-9599-f0d01a050b05",
+  "option_operagx_editUrl": "https://create.gx.games/game/19f60550-d8c2-4c5e-a80c-96e6538496c6/edit",
+  "option_operagx_internalShareUrl": "",
+  "option_operagx_publicShareUrl": "",
+}
