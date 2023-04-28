@@ -18,14 +18,14 @@ Mas, baseado no CelinhoAdventures, existem sim planos para desenvolver *outros* 
 <hr style="border:2px solid gray">
 
 ## 🤝 Agradecimentos
+### Célio Carvalho
+Que serviu de inspiração, e foi o motivo deste projeto ter sido criado.
+
 ### Arthur Torres
 Por ajudar em ideias de lore e pacing do jogo.
 
 ### Canal **Ponto e Vírgula** no *YouTube*
 Por ótimos tutoriais que me ajudaram como total iniciante no GameMaker.
-
-### Célio Carvalho
-Que serviu de inspiração, e foi o motivo deste projeto ter sido criado.
 <hr style="border:2px solid gray">
 
 ## 📝 Créditos
