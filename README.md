@@ -1,19 +1,19 @@
-# 🖥️ Projetos Pessoais
-### Repositório para códigos, trabalhos e projetos pessoais
+# 🖥️ Personal Projects
+### Repository for personal projects and/or hobbies
 -----------
 <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/bpsoraggi/Projetos-Pessoais" /> <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/bpsoraggi/Projetos-Pessoais" /> <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/bpsoraggi/Projetos-Pessoais" /> <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/bpsoraggi/Projetos-Pessoais" /> <img alt="" src="https://img.shields.io/github/repo-size/bpsoraggi/Projetos-Pessoais" />
 
-- 🎮 Jogos
-- ⌨️ Programas/Algoritmos
-- 💻 Sites
+- 🎮 Games
+- ⌨️ Programs/Algorithms
+- 💻 Websites
 - 💡 Misc.
 <hr style="border:2px solid gray">
 
-## ✔️ Completos
+## ✔️ Complete
 - 🎮 CelinhoAdventures
 <hr style="border:2px solid gray">
 
-## 🛠️ Em desenvolvimento
+## 🛠️ WIP
 - 🎮 Unnamed
 - 💻 Unnamed
 <hr style="border:2px solid gray">
