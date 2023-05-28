@@ -1,0 +1,165 @@
+Cutscene engine Changelog
+---------------------------
+Version 1.8.1
+
+BIG CHANGES
+- Now it's possible to use Draw GUI for dialogue (more information in the manual).
+- New experimental feature: Smart line break - Optional argument to cutscene_dialogue_style that prevents text changing line in the middle of a word. NOTE that this doesn't work correctly on all projects yet! (That's why it's an optional argument) Read the "Dialogue" part of the manual for tips on how to configure it.
+
+LITTLE CHANGES
+- New optional argument to cutscene_dialogue_style() script: text separation
+- New optional argument to cutscene_dialogue_style() script: syncSprite - To animate character sprite only when text is going.
+- New optional argument to cutscene_dialogue_style() & cutscene_dialogue_style_bubble() scripts: image speed (of character portrait and continue icon)
+- Sprite argument in cutscene_dialogue_style() is now optional
+- Now it's possible for the cutscene scripts to have a little more arguments (13)
+- Improved performance a lot, especially when using options and having mouse enabled in dialogue
+- Removed speed argument from cutscene_move_object_phy because it didn't have any effect
+- Started improving the scripts by adding better JSDoc Script Comments and adapting to the new ways of using scripts. This work will take some time and I'll be doing it little by little.
+- Improved code formatting a little and added/edited some comments
+- Updated manual
+- Other small changes
+
+BUG FIXES
+- Fixed bug: Changing separation in the "settings area" didn't have any effect
+- Fixed animation bug related to speech bubble continue icon
+
+---------------------------
+Version 1.8.0
+
+BIG CHANGES
+- NEW SCRIPT: cutscene_dialogue_portrait() - It makes it easier to change the portrait sprite of the character during dialogue
+- NEW SCRIPT: cutscene_draw_sprite() - Draws a sprite for a specified amount of seconds (Note that all the draw functions of cutscene engine use currently the DrawGUI event, so the position is relative to the view).
+- NEW SCRIPT: cutscene_move_object_phy() - Move an object when it has physics enabled
+- NEW SCRIPT: cutscene_dialogue_position() works finally - with it, you can change the position of the dialogue box, etc.
+- Added a "settings area" to the control_cutscene object. There you can change the default settings of dialogue so that you don't need to call some scripts every time. This can make making cutscenes with dialogue faster and cleaner.
+
+LITTLE CHANGES
+- Now it's possible to use dialogue without using the style script first - If you do that, the default style will be used. 
+- Improved code formatting a little and edited/added some comments
+- Updated manual
+
+BUG FIXES
+- Fixed animation bug (removed image_speed from textbox_draw and added it to textbox object create event)
+Now textbox animation speed (for the images) can be changed more easily, for example this way: if instance_exists(textbox){textbox.image_speed = 0.1;}
+
+---------------------------
+Version 1.7.1
+
+LITTLE CHANGES
+- Added a variable to prevent bug when using this together with my Dialogue engine's latest version.
+
+---------------------------
+Version 1.7.0
+
+BIG CHANGES
+- Changed object name from cutscene_textbox to textbox
+- Edited code in the textbox object and the option objects. Now they have the same code as the equivalent objects of my Dialogue engine. Thanks to this, it's smoother to use these engines together and less objects are needed. Also, this makes updating these engines much easier for me, which means that updates will be available faster when they are needed.
+
+LITTLE CHANGES
+- Changed array name from message to msg, because message has become a built-in variable
+- Changed a variable ("selected") from string to real number to make code easier to handle & to slightly improve performance
+- Updated manual (For example, added a simple step-by-step guide.)
+
+---------------------------
+Version 1.6.1
+
+LITTLE CHANGES
+- Backlog can now be scrolled with keyboard too
+
+BUG FIXES
+- Fixed text outside of speech bubbles when speech bubbles are nearly outside view and if there is a character name.
+- Now options can't be changed when backlog is visible
+
+---------------------------
+Version 1.6.0
+
+BIG CHANGES
+- Speech bubbles are now always inside the view.
+- Simple backlogs are here! Especially useful for visual novel type games. The new scripts are: cutscene_show_backlog(), cutscene_backlog_visible() and "internal" script textbox_draw_backlog().
+- Now you can hide the textbox / dialogue (For example, to show background art). The new scripts are cutscene_textbox_hide() (hides or shows the textbox) and cutscene_textbox_visible() (checks if the textbox is visible)
+- Now it's possible to select the option with WASD.
+- Selected option will now have a rectangle so it's easier to see. (Option objects will now be invisible.)
+
+LITTLE CHANGES
+- Decreased dialogue skip delay slightly. This makes it feel a little smoother.
+- Now speaker's face sprite will not be resized if it's position has been changed using cutscene_dialogue_position(). (However! I'm not sure if that script works yet. Going to check and fix it when I can.)
+- Removed some unnecessary lines of code from the "internal" scripts and made some little changes to possibly improve performance.
+- Increased font size in the example to make it look better.
+
+BUG FIXES
+- There is a possibility that this update fixes some rare bugs with the speech bubbles.
+- Fixed bug that prevented continuing in dialogue if the speed of the text was a certain value.
+- Now it's not necessary to use cutscene_dialogue_speed() in every dialogue in one cutscene after using it once.
+
+---------------------------
+Version 1.5.0
+
+BIG CHANGES
+- In dialogue: Now the speakers face sprite can be of any size and it will be automatically resized
+- In dialogue: Added possibility to change the volume and interval of textbox sound (optional arguments in cutscene_dialogue_sound).
+
+LITTLE CHANGES
+- Changed the default size of the textbox. Now it's slightly smaller.
+- In dialogue: Continue icon now shows after the delay, when it's actually possible to continue. It's a small change, but makes the dialogue feel better.
+
+BUG FIXES
+- Edited code in control_cutscene room start event & step event & cutscene_next to prevent non existent original camera object error (not tested! Or is it?)
+
+---------------------------
+Version 1.4.1
+
+BUG FIXES
+- When going from a persistent cutscene to another, things went weird
+- After going to a persistent cutscene, and then a normal one, the scene after dialogue didn't execute
+
+---------------------------
+Version 1.4.0
+
+BIG CHANGES
+- Changed a script's name to: cutscene_next()
+
+LITTLE CHANGES
+- Improved some scripts a little
+- Improved manual a little
+- Commented room_restart code that was used only for debugging
+
+BUG FIXES
+- Fixed bug that caused dialogue to start over again if going to a persistent cutscene and then to a normal cutscene in the same room.
+
+---------------------------
+Version 1.3.0
+
+LITTLE CHANGES
+- Added volume argument to scripts cutscene_play_music & cutscene_play_sound
+- Made option_objects compatible with my dialogue engine
+- Made some arguments optional in the cutscene_dialogue_style & cutscene_dialogue_style_bubble scripts
+- Changed changelog name: Cutscene engine changelog
+- Changed help note name: Cutscene engine manual
+
+---------------------------
+Version 1.2.0
+
+BIG CHANGES
+- Now in dialogue speak key and skip key can be the same key! By default both are space.
+- Now it's possible to add a "continue" icon to the dialogue
+
+LITTLE CHANGES
+- In the example it's now possible to move with WASD.
+---------------------------
+Version 1.1.0
+
+BIG CHANGES
+- Dialogue mouse control (it's now possible to select dialogue options and continue in the dialogue with the mouse)
+You can enable mouse control in the last argument of the cutscene_dialogue_style and cutscene_dialogue_style_bubble functions.
+
+LITTLE CHANGES
+- Changed contact email in the help note.
+- Changed a deprecated function to a new one.
+----------------------------------------------
+Version 1.0.2
+
+BUG FIXES
+- Fixed a little bug in the script textbox_draw_bubble
+----------------------------------------------
+Version 1.0.0
+- Cutscene engine released
