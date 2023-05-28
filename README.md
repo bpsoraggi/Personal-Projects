@@ -10,7 +10,7 @@
 <hr style="border:2px solid gray">
 
 ## ✔️ Complete
-- 🎮 CelinhoAdventures
+- 🎮 Celinho Adventures
 <hr style="border:2px solid gray">
 
 ## 🛠️ WIP
