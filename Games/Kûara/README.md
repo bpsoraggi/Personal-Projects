@@ -122,7 +122,7 @@ Here is where I'll be sharing some of the development process. Just a few snippe
 <div align="center">
   <img src="https://github.com/bpsoraggi/Personal-Projects/blob/main/Games/K%C3%BBara/imgs/inventoryDemo.gif" alt="gif" align="left" width="640" height="360"">
   <div align="left">
-    <br><br><br>
+    <br>
     &nbsp &nbsp &nbsp A lot of the art is done, maybe 20%, depending <br>
     &nbsp &nbsp &nbsp on how many items there will be in the end. I've <br>
     &nbsp &nbsp &nbsp done a couple of action animations as well, as <br>
@@ -131,6 +131,9 @@ Here is where I'll be sharing some of the development process. Just a few snippe
     &nbsp &nbsp &nbsp my plan is to have the shell ready first, then go <br>
     &nbsp &nbsp &nbsp back and polish it later once other features are <br>
     &nbsp &nbsp &nbsp complete.
+    <br><br>
+    &nbsp &nbsp &nbsp The red boxes on the map are collision objects <br>
+    &nbsp &nbsp &nbsp in testing.
   </div>
     <br clear="left"/>
 </div>
