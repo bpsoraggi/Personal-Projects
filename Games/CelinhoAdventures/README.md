@@ -95,8 +95,6 @@ This game was created as a birthday gift for my boyfriend and was my first 100% 
 <!-- DEVLOG -->
 ## 🔦 Showcase
 
-Here is where I'll be sharing some of the development process. Just a few snippets here and there, nothing too extended.
-
 ### Map
 
 <div align="center">
